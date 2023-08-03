@@ -1,6 +1,7 @@
 # Camel-K: Integrate Systems with Microservices
 
-*By Robert Baumgartner, Red Hat Austria, August 2023 (OpenShift 4.13)*
+*By Robert Baumgartner, Red Hat Austria, August 2023*
+*Tested with OpenSHift 4.13, AMQ Streams 2.4, Camel K  1.10, and OpenShift Serverless 1.29*
 
 
 Camel-K helps us integrate systems in an easy, simple, and cost-effective way. Do more with less.
@@ -556,4 +557,4 @@ $ oc delete project camel-k
 
 This document: 
 
-**[Github: rbaumgar/otelcol-demo-app](https://github.com/rbaumgar/otelcol-demo-app/blob/master/ServicePerformanceMonitoring.md)**
+**[Github: rbaumgar/camelk-kafka-postgre](https://github.com/rbaumgar/camelk-kafka-postgre/blob/master/Readme.md)**
