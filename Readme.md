@@ -1,6 +1,7 @@
-# Camel-K: Integrate Systems with Microservices
+# Camel-K: Integrate Systems with Microservices and Serverless
 
 *By Robert Baumgartner, Red Hat Austria, August 2023*
+
 *Tested with OpenSHift 4.13, AMQ Streams 2.4, Camel K  1.10, and OpenShift Serverless 1.29*
 
 
@@ -47,7 +48,14 @@ Many systems are usually involved when a new customer signs up. Using a few inte
 
 ## Step 1: Configure the Cluster Environment
 
-Our environment includes Kafka, a PostgreSQL database, and of course, Camel K. So first, we’ll set up our environment.
+The environment includes Kafka, a PostgreSQL database, and of course, Camel K. So first, we’ll set up our environment.
+
+Clone the project.
+
+```bash
+git clone https://github.com/rbaumgar/camelk-kafka-postgre/
+cd camelk-kafka-postgre
+```
 
 If the required operators are already installed you can skip this task. Continue with *Create a new OpenShift project...*
 
