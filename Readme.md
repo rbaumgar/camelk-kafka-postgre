@@ -1,11 +1,11 @@
-# Camel-K: Integrate Systems with Microservices and Serverless
+# Camel K: Integrate Systems with Microservices and Serverless
 
 *By Robert Baumgartner, Red Hat Austria, August 2023*
 
 *Tested with OpenSHift 4.13, AMQ Streams 2.4, Camel K  1.10, and OpenShift Serverless 1.29*
 
 
-Camel-K helps us integrate systems in an easy, simple, and cost-effective way. Do more with less.
+Camel K helps us integrate systems in an easy, simple, and cost-effective way. Do more with less.
 
 **Do more with less.**
 
@@ -27,7 +27,7 @@ Camel empowers you to define routing and mediation rules in a variety of domain-
 
 Apache Camel uses URIs to work directly with any kind of transport or messaging model such as HTTP, Kafka, JMS, JBI, SCA, MINA or CXF, as well as pluggable Components and Data Format options. Apache Camel is a small library with minimal dependencies for easy embedding in any Java application. Apache Camel lets you work with the same API regardless of which kind of transport is used — so learn the API once and you can interact with all the Components provided out-of-box.
 
-![Deploying an integration in Camel-K](images/Camel-K-for-developers-serverless-openshift-or-kubernetes.png)
+![Deploying an integration in Camel K](images/Camel-K-for-developers-serverless-openshift-or-kubernetes.png)
 
 Camel-K comes with over 150+ pre-built connectors for integrating anything from databases, message queues, or even Salesforce or Twitter.
 
@@ -38,13 +38,13 @@ But unlike regular integration platforms, Camel K is designed for Serverless. **
 ### What You’ll Need
 
 - An OpenShift Cluster with admin rights, if the required operators are not already installed.
-- [Kamel CLI](https://camel.apache.org/camel-k/1.12.x/cli/cli.html?ref=codelikethewind.org)
-- [Knative CLI](https://knative.dev/docs/client/install-kn/?ref=codelikethewind.org#install-the-knative-cli)
-- [hey load generator](https://github.com/rakyll/hey?ref=codelikethewind.org), hey is a tiny program that sends some load to a web application.
+- [Kamel CLI](https://camel.apache.org/camel-k/1.12.x/cli/cli.html)
+- [Knative CLI](https://knative.dev/docs/client/install-kn/#install-the-knative-cli)
+- [hey load generator](https://github.com/rakyll/hey), hey is a tiny program that sends some load to a web application.
 
 Many systems are usually involved when a new customer signs up. Using a few integrations, **we’ll create a customer sign-up flow** that saves their information to a database and sends them a welcome message.
 
-![Our Customer Signup Flow](images/Diagram.png)
+![The Customer Signup Flow](images/Diagram.png)
 
 ## Step 1: Configure the Cluster Environment
 
@@ -164,7 +164,7 @@ to build a new example application in Ruby. Or use kubectl to deploy a simple Ku
 
 ```
 
-### Create an IntegrationPlaform in the namespace
+### Create an IntegrationPlatform in the namespace
 
 This is required because we want to configure our IntegrationPlatform later.
 
@@ -434,7 +434,7 @@ $ hey -c 50 -n 3000 -t 30 -m POST -d '{"firstname": "Max", "lastname": "Musterma
 
 This sends 3000 messages with up to 50 requests concurrently to our Customer API.
 
-You should see more customer-api pods starting. As more requests come in, **our service is scaling to meet the demand**.
+You should see more customer-api pods starting. As more requests come in, **the service is scaling to meet the demand**.
 
 Open in another terminal the following watch to see the scale of the Customer API.
 
@@ -502,7 +502,7 @@ application_camel_context_exchanges_failed_total{camelContext="camel-1"} 0.0
 
 In the Openshift console, you will find in the developer view under *Observer* the dashboard, which gives you information about CPU, memory and IO.
 
-![OpenShift Console Observe/DashBoard/](images/Screenshot%20Observe%20Dashboard.png)
+![OpenShift Console Observe/DashBoard](images/Screenshot%20Observe%20Dashboard.png)
 
 On the tab *Metrics* you can enter *customer query* to expose metrics the values. 
 e.g. "application_camel_route_exchanges_total{camelContext="camel-1",routeId="route1"} "
@@ -558,8 +558,8 @@ $ oc delete project camel-k
 
 ## Project Code & Links
 
-- Camel K Serverless Demo (https://www.youtube.com/watch?v=hlUzLC71nAM&t=1725s&ab_channel=RedHatDeveloper&ref=codelikethewind.org)
-- Camel K Official Site (https://camel.apache.org/camel-k/1.12.x/index.html?ref=codelikethewind.org)
+- Camel K Serverless Demo (https://www.youtube.com/watch?v=hlUzLC71nAM&t=1725s&ab_channel=RedHatDeveloper)
+- Camel K Official Site (https://camel.apache.org/camel-k/1.12.x/index.html)
 - Knative Tutorial with Camel K (https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial/camelk/index.html)
 
 
